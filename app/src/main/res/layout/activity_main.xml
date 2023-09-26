@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/data"
+        android:textAlignment="viewEnd"
+        android:textSize="28sp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toTopOf="@id/result"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="=254"
+        android:visibility="gone"
+        android:textAlignment="viewEnd"
+        android:textSize="28sp"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/result"
+        android:textColor="#3C3B3B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        app:layout_constraintBottom_toTopOf="@id/linearlayout"
+        android:layout_marginBottom="6dp"
+        android:background="@color/linecolor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearlayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:gravity="center"
+           android:background="@color/linecolor"
+           android:layout_height="match_parent">
+
+           <com.google.android.material.button.MaterialButton
+               style="@style/operatorbutton"
+               android:id="@+id/btn_AC"
+               android:onClick="Allclear"
+               android:text="AC"
+
+               android:textSize="12dp"/>
+
+           <com.google.android.material.button.MaterialButton
+               android:onClick="backspace"
+               app:icon="@drawable/baseline_backspace_24"
+               style="@style/digitbutton"
+               android:id="@+id/btn_clear"
+               app:iconTint="@color/btnBackground2"/>
+           <com.google.android.material.button.MaterialButton
+               android:text="%"
+               android:id="@+id/btn_module"
+
+               android:onClick="OperaterAction"
+               style="@style/operatorbutton"/>
+           <com.google.android.material.button.MaterialButton
+               android:text="/"
+               android:onClick="OperaterAction"
+               android:id="@+id/btn_div"
+               style="@style/operatorbutton"/>
+               />
+
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/linecolor"
+            android:layout_height="match_parent">
+            <com.google.android.material.button.MaterialButton
+                android:text="7"
+                android:onClick="digit"
+                android:id="@+id/btn_7"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="8"
+                android:onClick="digit"
+                android:id="@+id/btn_8"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="9"
+                android:onClick="digit"
+                android:id="@+id/btn_9"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="*"
+                android:onClick="OperaterAction"
+                android:id="@+id/btn_multi"
+                style="@style/operatorbutton"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/linecolor"
+            android:layout_height="match_parent">
+            <com.google.android.material.button.MaterialButton
+                android:text="4"
+                android:onClick="digit"
+                android:id="@+id/btn_4"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="5"
+                android:onClick="digit"
+                android:id="@+id/btn_5"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="6"
+                android:onClick="digit"
+                android:id="@+id/btn_6"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="+"
+                android:onClick="OperaterAction"
+                android:id="@+id/btn_add"
+                style="@style/operatorbutton"/>
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/linecolor"
+            android:layout_height="match_parent">
+            <com.google.android.material.button.MaterialButton
+                android:text="1"
+                android:onClick="digit"
+                android:id="@+id/btn_1"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="2"
+                android:onClick="digit"
+                android:id="@+id/btn_2"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="3"
+                android:onClick="digit"
+                android:id="@+id/btn_3"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="-"
+                android:onClick="OperaterAction"
+                android:id="@+id/btn_sub"
+                style="@style/operatorbutton"                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/linecolor"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/digitbutton"
+                android:onClick="digit"
+                android:text="00"
+                android:id="@+id/btn_00"
+                android:textSize="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:text="0"
+                android:onClick="digit"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="."
+                android:onClick="digit"
+                android:id="@+id/btn_dot"
+                style="@style/digitbutton"/>
+            <com.google.android.material.button.MaterialButton
+                android:text="="
+                android:onClick="equal"
+                android:id="@+id/btn_equal"
+                style="@style/operatorbutton"
+                android:backgroundTint="@color/black"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
